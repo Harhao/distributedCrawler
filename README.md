@@ -1,0 +1,2 @@
+# distributedCrawler
+基于multiprocessing多进程的Managers模块的进程队列消息共享
