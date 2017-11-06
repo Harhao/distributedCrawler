@@ -40,7 +40,7 @@ class NodeManager(object):
                 url_q.put(new_url)
                 print("old_url=",url_manager.old_url_size())
             # 加一个判断条件，当爬取了2000条URL就关闭，并保存进度
-                if(url_manager.old_url_size()>2000):
+                if(url_manager.old_url_size()>20):
                 #通知爬行节点工作结束
                     print("爬取工作结束")
                     url_manager.save_progress("new_urls.txt",url_manager.new_urls)
@@ -50,7 +50,6 @@ class NodeManager(object):
             try:
                 if not conn_q.empty():
                     urls=conn_q.get()
-                    print(urls)
                     url_manager.add_new_urls(urls)
             except BaseException as e:
                 time.sleep(0.1)#延时休息
@@ -60,7 +59,6 @@ class NodeManager(object):
             try:
                 if not result_q.empty():
                     content=result_q.get(True)
-                    #print(content)
                     if content["new_urls"]=="end":
                         print("结果分析进程接受通知然后结束")
                         store_q.put('end')

@@ -35,9 +35,7 @@ class UrlManager(object):
         m.update(url.encode("utf-8"))
         url_md5=m.hexdigest()[-8:8]
         if url not in self.new_urls and url_md5 not in self.old_urls:
-            print(url)
             self.new_urls.add(url)
-            print(self.new_urls)
     def add_new_urls(self,urls):
         '''
         将新的urls添加到未爬取的URL集合中
@@ -46,7 +44,6 @@ class UrlManager(object):
         '''
         if urls is None or len(urls)==0:
             return
-        print(urls)
         for url in urls:
             self.add_new_url(url)
     def new_urls_size(self):
@@ -70,6 +67,7 @@ class UrlManager(object):
         '''
         with open(path,'wb') as f:
             pickle.dump(data,f)
+        print(data)
     def load_progress(self,path):
         '''
         从本地文件加载进度
