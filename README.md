@@ -1,2 +1,3 @@
 # distributedCrawler
 基于multiprocessing多进程的Managers模块的进程队列消息共享
+利用多进程实现简单分布式通信
