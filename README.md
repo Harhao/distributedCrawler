@@ -6,6 +6,6 @@
     - NodeManager.py主从模式的master启动文件
     - DataOutput.py爬取的数据输出处理类
 - distributedCrawler的Slave主要分为三部份:
-    - HtmlDownloader.py页面源码下载器类
-    - HtmlParser.py提取数据处理类
-    - SpiderWork.py Slave节点获取Master节点分发URL种子程序
+    - HtmlDownloader.py页面源码下载器类
+    - HtmlParser.py提取数据处理类
+    - SpiderWork.py Slave节点获取Master节点分发URL种子程序
