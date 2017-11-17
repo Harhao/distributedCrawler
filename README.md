@@ -8,4 +8,13 @@
 - distributedCrawler的Slave主要分为三部份:
     - HtmlDownloader.py页面源码下载器类
     - HtmlParser.py提取数据处理类
-    - SpiderWork.py Slave节点获取Master节点分发URL种子程序
+    - SpiderWork.py Slave节点获取Master节点分发URL种子程序
+- 使用方式：
+    - 进入distributedCrawler的MasterNode目录运行命令：
+    ```
+    $ python NodeManager.py
+    ```
+    - 进入distributedCrawler的SlaveNode目录运行命令：
+    ```
+    $ python SpiderWork.py
+    ```
